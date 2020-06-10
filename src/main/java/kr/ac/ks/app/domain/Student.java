@@ -1,20 +1,20 @@
 package kr.ac.ks.app.domain;
 
+
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
-@ToString(of = {"id", "name", "email", "phoneNo", "status"})
-@EqualsAndHashCode(of = "id")
+@ToString(of = {"id","name","email","phoneNo","status"})
+@EqualsAndHashCode(of = {"id"})
 @Builder
-@Entity
+
 public class Student {
-    @Id
-    @GeneratedValue
     private Long id;
     private String name;
     private String email;
